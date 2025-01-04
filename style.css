@@ -1,0 +1,124 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+#noteInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#noteInput input,
+#noteInput #noteDescription {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+#noteDescription {
+  height: 50px;
+}
+
+#buttonGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 30%;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border: 2px solid;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+#addNote {
+  border-color: #4caf50;
+  color: #4caf50;
+}
+
+#clearNotes {
+  border-color: #f44336;
+  color: #f44336;
+  margin-top: 10px;
+}
+
+#notesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.note {
+  background-color: rgba(255, 255, 204, 0.8);
+  border: 1px solid rgba(255, 255, 204, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  width: 250px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.note h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.note p {
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.note p.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  #main {
+    flex-direction: column;
+  }
+
+  #buttonGroup {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
